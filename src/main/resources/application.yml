@@ -1,0 +1,21 @@
+spring:
+  main:
+    web-application-type: none # no Tomcat, runs as CLI
+    banner-mode: console
+
+logging:
+  level:
+    root: INFO
+    com.example.hrxchallenge: DEBUG
+
+app:
+  name: "Rishiraam"
+  regNo: "22BCT0082"
+  email: "rsiam2454@gmail.com"
+  solve:
+    source: file         # file | inline
+    file: "classpath:solution.sql"
+    inline: "SELECT 1"
+  endpoints:
+    generate: "https://bfhldevapigw.healthrx.co.in/hiring/generateWebhook/JAVA"
+    submitFallback: "https://bfhldevapigw.healthrx.co.in/hiring/testWebhook/JAVA"
